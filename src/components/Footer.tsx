@@ -65,7 +65,7 @@ const Footer = () => {
             </div>
             
             <p className="mt-6 md:mt-0 text-base text-gray-400 text-center">
-              In collaboration with InquestAI | Powered by local educators & mentors
+              Powered by <a href="https://InquestAI.com" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">InquestAI.com</a> | Created by local educators & mentors
             </p>
             
             <p className="mt-6 md:mt-0 text-sm text-gray-500">
