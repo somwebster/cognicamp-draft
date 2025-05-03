@@ -21,6 +21,9 @@ const HeroSection = () => {
             <p className="animate-fade-in opacity-0 [animation-delay:0.4s] mt-6 text-xl text-gray-600 max-w-2xl">
               A hands-on bootcamp for K–12 students to learn AI by building, creating, and sharing.
             </p>
+            <p className="animate-fade-in opacity-0 [animation-delay:0.5s] mt-4 text-xl font-medium text-primary italic">
+              Your quest to build with AI starts here.
+            </p>
             <div className="animate-fade-in opacity-0 [animation-delay:0.6s] mt-10 sm:flex space-y-4 sm:space-y-0 sm:space-x-4">
               <Button size="lg" className="bg-primary hover:bg-blue-600 text-white">
                 Register Now
@@ -35,7 +38,7 @@ const HeroSection = () => {
         
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <div className="animate-float h-56 w-full sm:h-72 md:h-96 lg:w-full lg:h-full bg-contain bg-center bg-no-repeat" 
-               style={{ backgroundImage: "url('/placeholder.svg')" }}>
+               style={{ backgroundImage: "url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')" }}>
           </div>
         </div>
       </div>

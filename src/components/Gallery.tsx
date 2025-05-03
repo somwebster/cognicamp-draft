@@ -10,19 +10,19 @@ const Gallery = () => {
       title: "Plant Identifier",
       student: "Team Greenleaf",
       description: "An AI app that identifies 20+ common houseplants and provides care instructions.",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Wildlife Tracker",
       student: "Team Safari",
       description: "Helps identify local wildlife and track animal populations in the Evanston area.",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Recycling Helper",
       student: "Team EcoSmart",
       description: "Determines if items are recyclable and provides proper disposal instructions.",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     }
   ];
 
@@ -30,12 +30,12 @@ const Gallery = () => {
     {
       quote: "My daughter came home every day excited about what she learned. Now she wants to study computer science in college!",
       author: "Parent of 8th grade student",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
     },
     {
       quote: "I never thought I could build an AI app in just one week. This bootcamp changed how I think about technology.",
       author: "Jacob, 7th grade student",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
     }
   ];
 
@@ -51,14 +51,14 @@ const Gallery = () => {
     <section id="gallery" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Gallery</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
+          <h2 className="animate-fade-in opacity-0 [animation-delay:0.2s] text-3xl font-bold text-gray-900 sm:text-4xl">Gallery</h2>
+          <p className="animate-fade-in opacity-0 [animation-delay:0.3s] mt-4 max-w-2xl mx-auto text-xl text-gray-600">
             See what our students have created
           </p>
         </div>
 
         {/* Project carousel */}
-        <div className="mt-12 relative">
+        <div className="mt-12 relative animate-fade-in opacity-0 [animation-delay:0.4s]">
           <div className="overflow-hidden rounded-xl">
             <div 
               className="flex transition-transform duration-500 ease-in-out" 
@@ -139,11 +139,11 @@ const Gallery = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 animate-fade-in opacity-0 [animation-delay:0.6s]">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl shadow-sm p-6 border border-gray-100"
+              className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 card-hover"
             >
               <div className="flex items-start">
                 <div className="flex-shrink-0">
