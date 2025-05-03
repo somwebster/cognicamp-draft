@@ -7,34 +7,34 @@ const Gallery = () => {
 
   const projects = [
     {
-      title: "Plant Identifier",
-      student: "Team Greenleaf",
-      description: "An AI app that identifies 20+ common houseplants and provides care instructions.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      title: "Wildlife Recognition",
+      creator: "National Parks Conservation",
+      description: "An AI solution that identifies and tracks 50+ endangered species in national parks to support conservation efforts.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     },
     {
-      title: "Wildlife Tracker",
-      student: "Team Safari",
-      description: "Helps identify local wildlife and track animal populations in the Evanston area.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      title: "Code Assistant",
+      creator: "DevTeam Solutions",
+      description: "Custom AI coding assistant that helps development teams write cleaner, more efficient code across multiple languages.",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     },
     {
-      title: "Recycling Helper",
-      student: "Team EcoSmart",
-      description: "Determines if items are recyclable and provides proper disposal instructions.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      title: "Medical Image Analysis",
+      creator: "HealthTech Innovations",
+      description: "AI-powered diagnostic tool that analyzes medical images to assist healthcare professionals in early detection of conditions.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     }
   ];
 
   const testimonials = [
     {
-      quote: "My daughter came home every day excited about what she learned. Now she wants to study computer science in college!",
-      author: "Parent of 8th grade student",
+      quote: "InquestAI has transformed how our organization develops AI solutions. We've cut development time in half while improving our models' accuracy.",
+      author: "CTO, Fortune 500 Tech Company",
       image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
     },
     {
-      quote: "I never thought I could build an AI app in just one week. This bootcamp changed how I think about technology.",
-      author: "Jacob, 7th grade student",
+      quote: "The platform's intuitive interface allowed our team to develop AI solutions without deep technical expertise. We've deployed three critical applications in just two months.",
+      author: "Director of Innovation, Healthcare Provider",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
     }
   ];
@@ -51,9 +51,9 @@ const Gallery = () => {
     <section id="gallery" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="animate-fade-in opacity-0 [animation-delay:0.2s] text-3xl font-bold text-gray-900 sm:text-4xl">Gallery</h2>
+          <h2 className="animate-fade-in opacity-0 [animation-delay:0.2s] text-3xl font-bold text-gray-900 sm:text-4xl">Success Stories</h2>
           <p className="animate-fade-in opacity-0 [animation-delay:0.3s] mt-4 max-w-2xl mx-auto text-xl text-gray-600">
-            See what our students have created
+            Discover what creators have built with InquestAI
           </p>
         </div>
 
@@ -77,9 +77,9 @@ const Gallery = () => {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
                             <div>
-                              <p className="text-white text-xs uppercase tracking-wider">Student Project</p>
+                              <p className="text-white text-xs uppercase tracking-wider">Featured Project</p>
                               <h3 className="text-white text-lg font-bold">{project.title}</h3>
-                              <p className="text-white/80 text-sm">by {project.student}</p>
+                              <p className="text-white/80 text-sm">by {project.creator}</p>
                             </div>
                           </div>
                         </div>
@@ -89,7 +89,7 @@ const Gallery = () => {
                         <p className="mt-2 text-gray-600">{project.description}</p>
                         <div className="mt-4 bg-blue-50 p-4 rounded-lg">
                           <p className="text-sm">
-                            <span className="font-semibold">Technologies used:</span> Teachable Machine, HTML/CSS, Gemini AI
+                            <span className="font-semibold">Technologies used:</span> InquestAI, Custom ML models, API Integration
                           </p>
                           <div className="mt-2 flex items-center">
                             <div className="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
@@ -98,7 +98,7 @@ const Gallery = () => {
                                 <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                               </svg>
                             </div>
-                            <span className="ml-2 text-sm text-primary font-medium">View on InquestAI</span>
+                            <span className="ml-2 text-sm text-primary font-medium">View Project Case Study</span>
                           </div>
                         </div>
                       </div>
