@@ -55,8 +55,9 @@ const WhatYoullBuild = () => {
               <div className="sm:flex-1">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Hands-on learning experience</h3>
                 <p className="text-gray-600">
-                  Students will work in teams to design, train, and deploy their own image classification 
-                  model, resulting in a fully functional web app that can identify objects in real-time.
+                  Students will work in teams using Cursor, Teachable Machine, and Gemini AI to build a real 
+                  application with no coding experience required. They'll design, train, and deploy their own 
+                  image classification model, resulting in a fully functional web app that can identify objects in real-time.
                 </p>
               </div>
               <div className="mt-6 sm:mt-0 sm:ml-10 sm:flex-1">
