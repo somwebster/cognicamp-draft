@@ -15,14 +15,14 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center py-16 md:py-20 lg:py-28">
           <div className="order-2 md:order-1">
             <h1 className="animate-fade-in opacity-0 [animation-delay:0.2s] text-4xl font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-              AI Makers Lab – 
+              Midwest Vibe – 
               <span className="text-primary block">Build Your First AI App</span>
             </h1>
             <p className="animate-fade-in opacity-0 [animation-delay:0.4s] mt-6 text-xl text-gray-600 max-w-2xl">
               A hands-on bootcamp for K–12 students to learn AI by building, creating, and sharing.
             </p>
             <p className="animate-fade-in opacity-0 [animation-delay:0.5s] mt-4 text-xl font-medium text-primary italic">
-              Your quest to build with AI starts here.
+              Promoting AI literacy across Illinois, USA.
             </p>
             <div className="animate-fade-in opacity-0 [animation-delay:0.6s] mt-10 flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-primary hover:bg-blue-600 text-white w-full sm:w-auto">

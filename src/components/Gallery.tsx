@@ -7,33 +7,33 @@ const Gallery = () => {
 
   const projects = [
     {
-      title: "Predictive Maintenance System",
-      creator: "Manufacturing Solutions Inc.",
-      description: "An AI-powered system that analyzes equipment sensor data to predict failures before they occur, reducing downtime by 37% and maintenance costs by 28% across 12 production facilities.",
+      title: "Voice-Activated Weather Assistant",
+      creator: "Lincoln Middle School, 7th Grade",
+      description: "A weather app that uses speech recognition to provide forecasts. Students learned about APIs, natural language processing, and voice interfaces while building a practical tool that provides real-time weather updates for their community.",
       image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     },
     {
-      title: "Natural Language Processing for Legal Documents",
-      creator: "LegalTech Innovations",
-      description: "Custom NLP solution that reviews and extracts key information from legal contracts, reducing document processing time by 82% and improving accuracy to 96.5% for a leading law firm.",
+      title: "Wildlife Identification App",
+      creator: "Evanston Elementary, 5th Grade",
+      description: "An image recognition app that helps identify local Illinois wildlife. Students collected and labeled images from local parks, then trained a simplified machine learning model to identify common birds, mammals, and insects native to Illinois.",
       image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     },
     {
-      title: "Customer Behavior Analytics Platform",
-      creator: "RetailMetrics",
-      description: "An integrated AI solution that analyzes customer interactions across digital and physical touchpoints, helping a retail chain increase conversion rates by 23% and customer retention by 18%.",
+      title: "Math Homework Helper",
+      creator: "Northside High School, 10th Grade",
+      description: "An interactive app that solves and explains math problems step-by-step. High school students created algorithms to break down algebra, geometry, and calculus problems while providing clear explanations for younger students.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     },
     {
-      title: "Medical Diagnostic Assistant",
-      creator: "HealthAI Solutions",
-      description: "AI-powered diagnostic tool that analyzes medical images with 94% accuracy, now deployed in 37 hospitals nationwide and assisting radiologists in early detection of conditions.",
+      title: "Illinois History Chatbot",
+      creator: "Springfield Middle School, 8th Grade",
+      description: "A conversational AI that answers questions about Illinois history. Students researched state history and created a comprehensive knowledge base that powers their educational chatbot, making local history more accessible and engaging.",
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     },
     {
-      title: "Supply Chain Optimization Engine",
-      creator: "Logistics International",
-      description: "Machine learning solution that optimizes global supply chains in real-time, resulting in 15% reduction in shipping costs and 22% decrease in inventory holding requirements.",
+      title: "Recycling Sorter",
+      creator: "Chicago STEM Academy, 6th Grade",
+      description: "A computer vision app that identifies recyclable materials. Students built and trained an image recognition model to help their school community sort waste properly, reducing contamination in recycling bins by 43% in their first month.",
       image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     }
   ];
@@ -50,9 +50,9 @@ const Gallery = () => {
     <section id="gallery" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="animate-fade-in opacity-0 [animation-delay:0.2s] text-3xl font-bold text-gray-900 sm:text-4xl">Success Stories</h2>
+          <h2 className="animate-fade-in opacity-0 [animation-delay:0.2s] text-3xl font-bold text-gray-900 sm:text-4xl">Student Innovations</h2>
           <p className="animate-fade-in opacity-0 [animation-delay:0.3s] mt-4 max-w-2xl mx-auto text-xl text-gray-600">
-            Real-world AI solutions built with InquestAI
+            Amazing AI projects built by K-12 students across Illinois
           </p>
         </div>
 
@@ -76,9 +76,9 @@ const Gallery = () => {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
                             <div>
-                              <p className="text-white text-xs uppercase tracking-wider">Enterprise Solution</p>
+                              <p className="text-white text-xs uppercase tracking-wider">Student Project</p>
                               <h3 className="text-white text-lg font-bold">{project.title}</h3>
-                              <p className="text-white/80 text-sm">by {project.creator}</p>
+                              <p className="text-white/80 text-sm">{project.creator}</p>
                             </div>
                           </div>
                         </div>
@@ -88,7 +88,7 @@ const Gallery = () => {
                         <p className="mt-2 text-gray-600">{project.description}</p>
                         <div className="mt-4 bg-blue-50 p-4 rounded-lg">
                           <p className="text-sm">
-                            <span className="font-semibold">Technologies used:</span> InquestAI, Computer Vision, Natural Language Processing, Predictive Analytics
+                            <span className="font-semibold">Technologies used:</span> AI APIs, Machine Learning, Computer Vision, Natural Language Processing
                           </p>
                           <div className="mt-2 flex items-center">
                             <div className="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
@@ -97,18 +97,18 @@ const Gallery = () => {
                                 <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                               </svg>
                             </div>
-                            <span className="ml-2 text-sm text-primary font-medium">View Case Study</span>
+                            <span className="ml-2 text-sm text-primary font-medium">View Project Demo</span>
                           </div>
                         </div>
                         <div className="mt-4 flex items-center">
                           <div className="flex-shrink-0">
                             <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-semibold">
-                              {project.creator.charAt(0)}
+                              {project.creator.split(",")[0].charAt(0)}
                             </div>
                           </div>
                           <div className="ml-3">
-                            <p className="text-sm font-medium text-gray-900">ROI: 3.8x</p>
-                            <p className="text-sm text-gray-500">Implementation time: 12 weeks</p>
+                            <p className="text-sm font-medium text-gray-900">Completed in: 2 weeks</p>
+                            <p className="text-sm text-gray-500">Midwest Vibe AI Bootcamp</p>
                           </div>
                         </div>
                       </div>
