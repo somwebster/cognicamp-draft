@@ -22,7 +22,7 @@ const HeroSection = () => {
               A hands-on bootcamp for K–12 students to learn AI by building, creating, and sharing.
             </p>
             <p className="animate-fade-in opacity-0 [animation-delay:0.5s] mt-4 text-xl font-medium text-primary italic">
-              Promoting AI literacy across Illinois, USA.
+              Powered by Inquestai.com
             </p>
             <div className="animate-fade-in opacity-0 [animation-delay:0.6s] mt-10 flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-primary hover:bg-blue-600 text-white w-full sm:w-auto">
