@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MapPin, Calendar } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -24,6 +24,19 @@ const HeroSection = () => {
             <p className="animate-fade-in opacity-0 [animation-delay:0.5s] mt-4 text-xl font-medium text-primary italic">
               Powered by Inquestai.com
             </p>
+            
+            {/* Event details with icons */}
+            <div className="animate-fade-in opacity-0 [animation-delay:0.5s] mt-6 flex flex-col space-y-3">
+              <div className="flex items-center">
+                <MapPin className="h-5 w-5 text-primary mr-2" />
+                <span className="text-lg text-gray-700">Illinois, USA</span>
+              </div>
+              <div className="flex items-center">
+                <Calendar className="h-5 w-5 text-primary mr-2" />
+                <span className="text-lg text-gray-700">July 1 - July 5</span>
+              </div>
+            </div>
+            
             <div className="animate-fade-in opacity-0 [animation-delay:0.6s] mt-10 flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-primary hover:bg-blue-600 text-white w-full sm:w-auto">
                 Register Now
