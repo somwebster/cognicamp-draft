@@ -7,35 +7,34 @@ const Gallery = () => {
 
   const projects = [
     {
-      title: "Wildlife Recognition",
-      creator: "National Parks Conservation",
-      description: "An AI solution that identifies and tracks 50+ endangered species in national parks to support conservation efforts.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      title: "Predictive Maintenance System",
+      creator: "Manufacturing Solutions Inc.",
+      description: "An AI-powered system that analyzes equipment sensor data to predict failures before they occur, reducing downtime by 37% and maintenance costs by 28% across 12 production facilities.",
+      image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     },
     {
-      title: "Code Assistant",
-      creator: "DevTeam Solutions",
-      description: "Custom AI coding assistant that helps development teams write cleaner, more efficient code across multiple languages.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      title: "Natural Language Processing for Legal Documents",
+      creator: "LegalTech Innovations",
+      description: "Custom NLP solution that reviews and extracts key information from legal contracts, reducing document processing time by 82% and improving accuracy to 96.5% for a leading law firm.",
+      image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     },
     {
-      title: "Medical Image Analysis",
-      creator: "HealthTech Innovations",
-      description: "AI-powered diagnostic tool that analyzes medical images to assist healthcare professionals in early detection of conditions.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-    }
-  ];
-
-  const testimonials = [
-    {
-      quote: "InquestAI has transformed how our organization develops AI solutions. We've cut development time in half while improving our models' accuracy.",
-      author: "CTO, Fortune 500 Tech Company",
-      image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
+      title: "Customer Behavior Analytics Platform",
+      creator: "RetailMetrics",
+      description: "An integrated AI solution that analyzes customer interactions across digital and physical touchpoints, helping a retail chain increase conversion rates by 23% and customer retention by 18%.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     },
     {
-      quote: "The platform's intuitive interface allowed our team to develop AI solutions without deep technical expertise. We've deployed three critical applications in just two months.",
-      author: "Director of Innovation, Healthcare Provider",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
+      title: "Medical Diagnostic Assistant",
+      creator: "HealthAI Solutions",
+      description: "AI-powered diagnostic tool that analyzes medical images with 94% accuracy, now deployed in 37 hospitals nationwide and assisting radiologists in early detection of conditions.",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      title: "Supply Chain Optimization Engine",
+      creator: "Logistics International",
+      description: "Machine learning solution that optimizes global supply chains in real-time, resulting in 15% reduction in shipping costs and 22% decrease in inventory holding requirements.",
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     }
   ];
 
@@ -53,7 +52,7 @@ const Gallery = () => {
         <div className="text-center">
           <h2 className="animate-fade-in opacity-0 [animation-delay:0.2s] text-3xl font-bold text-gray-900 sm:text-4xl">Success Stories</h2>
           <p className="animate-fade-in opacity-0 [animation-delay:0.3s] mt-4 max-w-2xl mx-auto text-xl text-gray-600">
-            Discover what creators have built with InquestAI
+            Real-world AI solutions built with InquestAI
           </p>
         </div>
 
@@ -77,7 +76,7 @@ const Gallery = () => {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
                             <div>
-                              <p className="text-white text-xs uppercase tracking-wider">Featured Project</p>
+                              <p className="text-white text-xs uppercase tracking-wider">Enterprise Solution</p>
                               <h3 className="text-white text-lg font-bold">{project.title}</h3>
                               <p className="text-white/80 text-sm">by {project.creator}</p>
                             </div>
@@ -89,7 +88,7 @@ const Gallery = () => {
                         <p className="mt-2 text-gray-600">{project.description}</p>
                         <div className="mt-4 bg-blue-50 p-4 rounded-lg">
                           <p className="text-sm">
-                            <span className="font-semibold">Technologies used:</span> InquestAI, Custom ML models, API Integration
+                            <span className="font-semibold">Technologies used:</span> InquestAI, Computer Vision, Natural Language Processing, Predictive Analytics
                           </p>
                           <div className="mt-2 flex items-center">
                             <div className="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
@@ -98,7 +97,18 @@ const Gallery = () => {
                                 <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                               </svg>
                             </div>
-                            <span className="ml-2 text-sm text-primary font-medium">View Project Case Study</span>
+                            <span className="ml-2 text-sm text-primary font-medium">View Case Study</span>
+                          </div>
+                        </div>
+                        <div className="mt-4 flex items-center">
+                          <div className="flex-shrink-0">
+                            <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-semibold">
+                              {project.creator.charAt(0)}
+                            </div>
+                          </div>
+                          <div className="ml-3">
+                            <p className="text-sm font-medium text-gray-900">ROI: 3.8x</p>
+                            <p className="text-sm text-gray-500">Implementation time: 12 weeks</p>
                           </div>
                         </div>
                       </div>
@@ -136,28 +146,6 @@ const Gallery = () => {
               />
             ))}
           </div>
-        </div>
-
-        {/* Testimonials */}
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 animate-fade-in opacity-0 [animation-delay:0.6s]">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index}
-              className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 card-hover"
-            >
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-primary/20" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h10zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z" />
-                  </svg>
-                </div>
-                <div className="ml-4">
-                  <p className="text-gray-600 italic">{testimonial.quote}</p>
-                  <p className="mt-4 text-sm font-medium text-gray-900">{testimonial.author}</p>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
