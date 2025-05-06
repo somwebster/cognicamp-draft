@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const DailyBreakdown = () => {
   const [openDay, setOpenDay] = useState<number | null>(null);
@@ -76,44 +77,110 @@ const DailyBreakdown = () => {
           </p>
         </div>
 
-        <div className="mt-12 max-w-3xl mx-auto">
+        <div className="mt-12 relative">
+          {/* Timeline line */}
+          <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-gray-200 transform -translate-x-1/2 hidden md:block" />
+          
           {days.map((day, index) => (
-            <div key={index} className="mb-4 day-item">
-              <div 
-                className={`flex items-center justify-between bg-white rounded-lg border border-gray-200 shadow-sm p-4 cursor-pointer ${
-                  openDay === index ? 'rounded-b-none' : ''
-                }`}
-                onClick={() => toggleDay(index)}
-              >
-                <div className="flex items-center">
-                  <div className={`${day.color} h-10 w-10 flex items-center justify-center rounded-lg text-white font-semibold mr-4`}>
+            <div key={index} className="mb-8 relative z-10">
+              {/* Timeline item */}
+              <div className="flex flex-col md:flex-row items-center">
+                {/* Left side - visible on desktop */}
+                <div className="md:w-1/2 md:pr-12 hidden md:block">
+                  {index % 2 === 0 && (
+                    <div className="flex justify-end">
+                      <div className={`${day.color} text-white p-4 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1`}>
+                        <h3 className="text-xl font-bold">Day {day.number}</h3>
+                        <p className="text-white/90 font-medium">{day.title}</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                
+                {/* Circle indicator */}
+                <div className="hidden md:flex items-center justify-center z-10">
+                  <div 
+                    className={`${day.color} h-12 w-12 rounded-full border-4 border-white shadow flex items-center justify-center text-white font-bold`}
+                    onClick={() => toggleDay(index)}
+                  >
                     {day.number}
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900">Day {day.number}: {day.title}</h3>
                 </div>
-                {openDay === index ? (
-                  <ChevronUp className="h-5 w-5 text-gray-500" />
-                ) : (
-                  <ChevronDown className="h-5 w-5 text-gray-500" />
-                )}
+
+                {/* Right side - visible on desktop */}
+                <div className="md:w-1/2 md:pl-12 hidden md:block">
+                  {index % 2 === 1 && (
+                    <div className="flex justify-start">
+                      <div className={`${day.color} text-white p-4 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1`}>
+                        <h3 className="text-xl font-bold">Day {day.number}</h3>
+                        <p className="text-white/90 font-medium">{day.title}</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                
+                {/* Mobile view */}
+                <div className="w-full md:hidden">
+                  <div 
+                    className={`${day.color} text-white p-4 rounded-lg shadow-md flex items-center cursor-pointer`}
+                    onClick={() => toggleDay(index)}
+                  >
+                    <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center mr-4">
+                      <span className="font-bold">{day.number}</span>
+                    </div>
+                    <h3 className="text-lg font-bold">{day.title}</h3>
+                    {openDay === index ? (
+                      <ChevronUp className="h-5 w-5 text-white ml-auto" />
+                    ) : (
+                      <ChevronDown className="h-5 w-5 text-white ml-auto" />
+                    )}
+                  </div>
+                </div>
               </div>
               
+              {/* Content (shown when expanded) */}
               {openDay === index && (
-                <div className="bg-white border-t-0 border border-gray-200 rounded-b-lg p-6 shadow-sm">
-                  <ul className="space-y-2">
+                <div className="mt-4 bg-white rounded-lg border border-gray-100 shadow-sm p-6 mx-4 md:mx-auto md:w-2/3 transition-all duration-300 animate-fade-in">
+                  <h4 className="font-semibold text-lg text-gray-900 mb-3">Day {day.number} Activities:</h4>
+                  <ul className="space-y-3">
                     {day.content.map((item, i) => (
                       <li key={i} className="flex items-start">
-                        <div className="h-5 w-5 mt-0.5">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        <div className={`h-5 w-5 ${day.color} rounded-full flex items-center justify-center mt-1 mr-3`}>
+                          <svg className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
-                        <span className="ml-2 text-gray-700">{item}</span>
+                        <span className="text-gray-700">{item}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               )}
+              
+              {/* Desktop indicator to click for more details */}
+              <div className="hidden md:flex justify-center mt-4">
+                <button
+                  onClick={() => toggleDay(index)}
+                  className={`flex items-center text-sm font-medium ${openDay === index ? 'text-primary' : 'text-gray-500'} hover:text-primary transition-colors`}
+                >
+                  {openDay === index ? (
+                    <>
+                      <span>Hide details</span>
+                      <ChevronUp className="h-4 w-4 ml-1" />
+                    </>
+                  ) : (
+                    <>
+                      <span>Show details</span>
+                      <ChevronDown className="h-4 w-4 ml-1" />
+                    </>
+                  )}
+                </button>
+              </div>
+              
+              {/* Separator for mobile */}
+              <div className="md:hidden mt-6">
+                <Separator className="bg-gray-200" />
+              </div>
             </div>
           ))}
         </div>
