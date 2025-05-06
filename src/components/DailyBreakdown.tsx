@@ -89,12 +89,6 @@ const DailyBreakdown = () => {
                                 </li>
                               ))}
                             </ul>
-                            <p className="mt-3">Additional information about Day {day.number}</p>
-                            <ul className="mt-2 space-y-1 list-disc list-inside pl-2">
-                              <li>Begin with setup and preparation</li>
-                              <li>Focus on hands-on practice</li>
-                              <li>Complete daily challenges</li>
-                            </ul>
                           </div>
                         </CollapsibleContent>
                       </Collapsible>
@@ -140,12 +134,6 @@ const DailyBreakdown = () => {
                                 </li>
                               ))}
                             </ul>
-                            <p className="mt-3">Additional information about Day {day.number}</p>
-                            <ul className="mt-2 space-y-1 list-disc list-inside pl-2">
-                              <li>Begin with setup and preparation</li>
-                              <li>Focus on hands-on practice</li>
-                              <li>Complete daily challenges</li>
-                            </ul>
                           </div>
                         </CollapsibleContent>
                       </Collapsible>
@@ -187,12 +175,6 @@ const DailyBreakdown = () => {
                               <span className="text-white/90">{item}</span>
                             </li>
                           ))}
-                        </ul>
-                        <p className="mt-3">Additional information about Day {day.number}</p>
-                        <ul className="mt-2 space-y-1 list-disc list-inside pl-2">
-                          <li>Begin with setup and preparation</li>
-                          <li>Focus on hands-on practice</li>
-                          <li>Complete daily challenges</li>
                         </ul>
                       </div>
                     </CollapsibleContent>
