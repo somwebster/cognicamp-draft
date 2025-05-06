@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <div className="flex flex-col items-center md:items-start">
               <div className="flex items-center">
-                <span className="font-bold text-white text-2xl">Midwest Vibe</span>
+                <span className="font-bold text-white text-2xl">Cognicamp</span>
               </div>
               <p className="mt-3 text-sm text-gray-400 text-center md:text-left">
                 Empowering the next generation of AI innovators
@@ -69,7 +69,7 @@ const Footer = () => {
             </p>
             
             <p className="mt-6 md:mt-0 text-sm text-gray-500">
-              &copy; {new Date().getFullYear()} Midwest Vibe. All rights reserved.
+              &copy; {new Date().getFullYear()} Cognicamp. All rights reserved.
             </p>
           </div>
         </div>
