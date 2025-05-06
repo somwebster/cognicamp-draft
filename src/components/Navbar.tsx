@@ -1,9 +1,16 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { RegistrationModal } from './RegistrationModal';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleRegisterClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
 
   return (
     <nav className="bg-white sticky top-0 z-50 shadow-sm">
@@ -20,7 +27,13 @@ const Navbar = () => {
             <a href="#what-you-build" className="text-gray-700 hover:text-primary px-2 py-1 rounded-md text-sm font-medium transition-colors">What You'll Build</a>
             <a href="#daily-breakdown" className="text-gray-700 hover:text-primary px-2 py-1 rounded-md text-sm font-medium transition-colors">Schedule</a>
             <a href="#faq" className="text-gray-700 hover:text-primary px-2 py-1 rounded-md text-sm font-medium transition-colors">FAQ</a>
-            <a href="#register" className="bg-primary text-white hover:bg-blue-600 px-4 py-2 rounded-md text-sm font-medium transition-colors">Register Now</a>
+            <a 
+              href="#register" 
+              className="bg-primary text-white hover:bg-blue-600 px-4 py-2 rounded-md text-sm font-medium transition-colors"
+              onClick={handleRegisterClick}
+            >
+              Register Now
+            </a>
           </div>
           
           <div className="flex md:hidden items-center">
@@ -39,10 +52,21 @@ const Navbar = () => {
             <a href="#what-you-build" className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">What You'll Build</a>
             <a href="#daily-breakdown" className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Schedule</a>
             <a href="#faq" className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">FAQ</a>
-            <a href="#register" className="bg-primary text-white block px-3 py-2 rounded-md text-base font-medium mt-4">Register Now</a>
+            <a 
+              href="#register" 
+              className="bg-primary text-white block px-3 py-2 rounded-md text-base font-medium mt-4"
+              onClick={handleRegisterClick}
+            >
+              Register Now
+            </a>
           </div>
         </div>
       )}
+
+      <RegistrationModal 
+        open={isModalOpen}
+        onOpenChange={setIsModalOpen}
+      />
     </nav>
   );
 };

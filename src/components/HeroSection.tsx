@@ -1,7 +1,12 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Calendar } from "lucide-react";
+import { useState } from "react";
+import { RegistrationModal } from "./RegistrationModal";
+
 const HeroSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
   return <div className="relative bg-gradient-to-br from-blue-50 to-white overflow-hidden">
       {/* Abstract shapes */}
       <div className="hidden lg:block absolute top-0 left-0 w-full h-full overflow-hidden z-0">
@@ -36,7 +41,11 @@ const HeroSection = () => {
             </div>
             
             <div className="animate-fade-in opacity-0 [animation-delay:0.6s] mt-10 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary hover:bg-blue-600 text-white w-full sm:w-auto">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-blue-600 text-white w-full sm:w-auto"
+                onClick={() => setIsModalOpen(true)}
+              >
                 Register Now
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -60,6 +69,11 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      <RegistrationModal 
+        open={isModalOpen}
+        onOpenChange={setIsModalOpen}
+      />
     </div>;
 };
 export default HeroSection;
