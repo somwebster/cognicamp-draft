@@ -13,8 +13,8 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center py-16 md:py-20 lg:py-28">
           <div className="order-2 md:order-1">
             <h1 className="animate-fade-in opacity-0 [animation-delay:0.2s] text-4xl font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-              Cognicamp – 
-              <span className="text-primary block">Build AI Apps. No Code. Pure Vibe.</span>
+              CogniCamp –
+              <span className="text-primary block text-3xl sm:text-4xl md:text-5xl">Build AI Apps. No Code. Pure Vibe.</span>
             </h1>
             <p className="animate-fade-in opacity-0 [animation-delay:0.4s] mt-6 text-xl text-gray-600 max-w-2xl">
               A hands-on bootcamp for K–12 students to learn AI by building, creating, and sharing.
