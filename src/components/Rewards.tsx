@@ -22,11 +22,11 @@ const Rewards = () => {
               <div className="flex justify-center mb-6">
                 <Trophy className="w-16 h-16 text-amber-500" />
               </div>
-              <h3 className="text-2xl font-semibold mb-4">Participants' Rewards</h3>
+              <h3 className="text-2xl font-semibold mb-4">Builder Rewards</h3>
               <p className="text-gray-600 text-lg mb-6">
-                All participants with completed projects will receive exclusive swag packs from Inquest AI, 
-                including branded hoodies, stickers, and certificates. The best projects will be featured 
-                on our website and social media channels!
+                Top 3 builders will earn exclusive swags and goodies from Inquest AI worth $500! 
+                Show off your creativity and technical skills to win these amazing prizes and get 
+                featured across our platform.
               </p>
               <Button className="mt-2">Learn More</Button>
             </CardContent>
