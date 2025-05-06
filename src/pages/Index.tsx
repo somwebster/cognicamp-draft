@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import WhatYoullBuild from "@/components/WhatYoullBuild";
 import DailyBreakdown from "@/components/DailyBreakdown";
+import Rewards from "@/components/Rewards";
 import FAQ from "@/components/FAQ";
 import Gallery from "@/components/Gallery";
 import CallToAction from "@/components/CallToAction";
@@ -16,6 +17,7 @@ const Index = () => {
         <HeroSection />
         <WhatYoullBuild />
         <DailyBreakdown />
+        <Rewards />
         <FAQ />
         <Gallery />
         <CallToAction />
