@@ -89,9 +89,27 @@ const DailyBreakdown = () => {
                 <div className="md:w-1/2 md:pr-12 hidden md:block">
                   {index % 2 === 0 && (
                     <div className="flex justify-end">
-                      <div className={`${day.color} text-white p-4 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1`}>
-                        <h3 className="text-xl font-bold">Day {day.number}</h3>
-                        <p className="text-white/90 font-medium">{day.title}</p>
+                      <div className={`${day.color} text-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 w-80 h-48 flex flex-col`}>
+                        <div className="flex justify-between items-center mb-3">
+                          <h3 className="text-xl font-bold">Day {day.number}</h3>
+                          <div className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center">
+                            <span className="font-bold">{day.number}</span>
+                          </div>
+                        </div>
+                        <p className="text-white/90 font-medium mb-4">{day.title}</p>
+                        
+                        <ul className="space-y-2 mt-auto">
+                          {day.content.map((item, i) => (
+                            <li key={i} className="flex items-start text-sm">
+                              <div className="h-4 w-4 bg-white/30 rounded-full flex items-center justify-center mt-1 mr-2 flex-shrink-0">
+                                <svg className="h-2 w-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                </svg>
+                              </div>
+                              <span className="text-white/90">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   )}
@@ -100,7 +118,7 @@ const DailyBreakdown = () => {
                 {/* Circle indicator */}
                 <div className="hidden md:flex items-center justify-center z-10">
                   <div 
-                    className={`${day.color} h-12 w-12 rounded-full border-4 border-white shadow flex items-center justify-center text-white font-bold`}
+                    className={`${day.color} h-12 w-12 rounded-full border-4 border-white shadow flex items-center justify-center text-white font-bold cursor-pointer`}
                     onClick={() => toggleDay(index)}
                   >
                     {day.number}
@@ -111,9 +129,27 @@ const DailyBreakdown = () => {
                 <div className="md:w-1/2 md:pl-12 hidden md:block">
                   {index % 2 === 1 && (
                     <div className="flex justify-start">
-                      <div className={`${day.color} text-white p-4 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1`}>
-                        <h3 className="text-xl font-bold">Day {day.number}</h3>
-                        <p className="text-white/90 font-medium">{day.title}</p>
+                      <div className={`${day.color} text-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 w-80 h-48 flex flex-col`}>
+                        <div className="flex justify-between items-center mb-3">
+                          <h3 className="text-xl font-bold">Day {day.number}</h3>
+                          <div className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center">
+                            <span className="font-bold">{day.number}</span>
+                          </div>
+                        </div>
+                        <p className="text-white/90 font-medium mb-4">{day.title}</p>
+                        
+                        <ul className="space-y-2 mt-auto">
+                          {day.content.map((item, i) => (
+                            <li key={i} className="flex items-start text-sm">
+                              <div className="h-4 w-4 bg-white/30 rounded-full flex items-center justify-center mt-1 mr-2 flex-shrink-0">
+                                <svg className="h-2 w-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                </svg>
+                              </div>
+                              <span className="text-white/90">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   )}
