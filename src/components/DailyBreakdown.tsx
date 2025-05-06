@@ -68,19 +68,6 @@ const DailyBreakdown = () => {
                         </div>
                         <p className="text-white/90 font-medium mb-4">{day.title}</p>
                         
-                        <ul className="space-y-2 mt-2">
-                          {day.content.map((item, i) => (
-                            <li key={i} className="flex items-start text-sm">
-                              <div className="h-4 w-4 bg-white/30 rounded-full flex items-center justify-center mt-1 mr-2 flex-shrink-0">
-                                <svg className="h-2 w-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                </svg>
-                              </div>
-                              <span className="text-white/90">{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        
                         <CollapsibleTrigger className="mt-4 w-full flex items-center justify-center text-white/80 hover:text-white transition-colors">
                           <div className="flex items-center space-x-1">
                             <span className="text-sm font-medium">Show details</span>
@@ -90,7 +77,19 @@ const DailyBreakdown = () => {
                         
                         <CollapsibleContent className="mt-4 pt-3 border-t border-white/20">
                           <div className="text-sm text-white/90">
-                            <p>Additional information about Day {day.number}</p>
+                            <ul className="space-y-2">
+                              {day.content.map((item, i) => (
+                                <li key={i} className="flex items-start text-sm">
+                                  <div className="h-4 w-4 bg-white/30 rounded-full flex items-center justify-center mt-1 mr-2 flex-shrink-0">
+                                    <svg className="h-2 w-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                    </svg>
+                                  </div>
+                                  <span className="text-white/90">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                            <p className="mt-3">Additional information about Day {day.number}</p>
                             <ul className="mt-2 space-y-1 list-disc list-inside pl-2">
                               <li>Begin with setup and preparation</li>
                               <li>Focus on hands-on practice</li>
@@ -120,19 +119,6 @@ const DailyBreakdown = () => {
                         </div>
                         <p className="text-white/90 font-medium mb-4">{day.title}</p>
                         
-                        <ul className="space-y-2 mt-2">
-                          {day.content.map((item, i) => (
-                            <li key={i} className="flex items-start text-sm">
-                              <div className="h-4 w-4 bg-white/30 rounded-full flex items-center justify-center mt-1 mr-2 flex-shrink-0">
-                                <svg className="h-2 w-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                </svg>
-                              </div>
-                              <span className="text-white/90">{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        
                         <CollapsibleTrigger className="mt-4 w-full flex items-center justify-center text-white/80 hover:text-white transition-colors">
                           <div className="flex items-center space-x-1">
                             <span className="text-sm font-medium">Show details</span>
@@ -142,7 +128,19 @@ const DailyBreakdown = () => {
                         
                         <CollapsibleContent className="mt-4 pt-3 border-t border-white/20">
                           <div className="text-sm text-white/90">
-                            <p>Additional information about Day {day.number}</p>
+                            <ul className="space-y-2">
+                              {day.content.map((item, i) => (
+                                <li key={i} className="flex items-start text-sm">
+                                  <div className="h-4 w-4 bg-white/30 rounded-full flex items-center justify-center mt-1 mr-2 flex-shrink-0">
+                                    <svg className="h-2 w-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                    </svg>
+                                  </div>
+                                  <span className="text-white/90">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                            <p className="mt-3">Additional information about Day {day.number}</p>
                             <ul className="mt-2 space-y-1 list-disc list-inside pl-2">
                               <li>Begin with setup and preparation</li>
                               <li>Focus on hands-on practice</li>
@@ -166,18 +164,6 @@ const DailyBreakdown = () => {
                       </div>
                       <div>
                         <h3 className="text-lg font-bold">{day.title}</h3>
-                        <ul className="space-y-2 mt-2">
-                          {day.content.map((item, i) => (
-                            <li key={i} className="flex items-start text-sm">
-                              <div className="h-4 w-4 bg-white/30 rounded-full flex items-center justify-center mt-1 mr-2 flex-shrink-0">
-                                <svg className="h-2 w-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                </svg>
-                              </div>
-                              <span className="text-white/90">{item}</span>
-                            </li>
-                          ))}
-                        </ul>
                       </div>
                     </div>
                     
@@ -190,7 +176,19 @@ const DailyBreakdown = () => {
                     
                     <CollapsibleContent className="mt-4 pt-3 border-t border-white/20">
                       <div className="text-sm text-white/90">
-                        <p>Additional information about Day {day.number}</p>
+                        <ul className="space-y-2">
+                          {day.content.map((item, i) => (
+                            <li key={i} className="flex items-start text-sm">
+                              <div className="h-4 w-4 bg-white/30 rounded-full flex items-center justify-center mt-1 mr-2 flex-shrink-0">
+                                <svg className="h-2 w-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                </svg>
+                              </div>
+                              <span className="text-white/90">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <p className="mt-3">Additional information about Day {day.number}</p>
                         <ul className="mt-2 space-y-1 list-disc list-inside pl-2">
                           <li>Begin with setup and preparation</li>
                           <li>Focus on hands-on practice</li>
