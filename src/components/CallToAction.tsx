@@ -1,8 +1,12 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { RegistrationModal } from "./RegistrationModal";
 
 const CallToAction = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section id="register" className="py-16 bg-gradient-to-br from-primary/90 to-blue-600 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +20,11 @@ const CallToAction = () => {
           </p>
           
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
+            <Button 
+              size="lg" 
+              className="bg-white text-primary hover:bg-gray-100"
+              onClick={() => setIsModalOpen(true)}
+            >
               Apply Now
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -33,6 +41,11 @@ const CallToAction = () => {
           </div>
         </div>
       </div>
+
+      <RegistrationModal 
+        open={isModalOpen}
+        onOpenChange={setIsModalOpen}
+      />
     </section>
   );
 };
