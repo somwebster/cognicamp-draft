@@ -1,6 +1,9 @@
+
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+
 const DailyBreakdown = () => {
   const [openDay, setOpenDay] = useState<number | null>(null);
   const days = [{
@@ -29,6 +32,7 @@ const DailyBreakdown = () => {
     color: "bg-purple-500",
     content: ["Final touches and improvements", "Present your project to the group", "Publish your creation on InquestAI"]
   }];
+
   const toggleDay = (index: number) => {
     if (openDay === index) {
       setOpenDay(null);
@@ -36,6 +40,7 @@ const DailyBreakdown = () => {
       setOpenDay(index);
     }
   };
+
   return <section id="daily-breakdown" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
@@ -49,33 +54,53 @@ const DailyBreakdown = () => {
           {/* Timeline line */}
           <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-gray-200 transform -translate-x-1/2 hidden md:block" />
           
-          {days.map((day, index) => <div key={index} className="mb-8 relative z-10">
+          {days.map((day, index) => (
+            <div key={index} className="mb-8 relative z-10">
               {/* Timeline item */}
               <div className="flex flex-col md:flex-row items-center">
                 {/* Left side - visible on desktop */}
                 <div className="md:w-1/2 md:pr-12 hidden md:block">
-                  {index % 2 === 0 && <div className="flex justify-end">
-                      <div className={`${day.color} text-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 w-80 h-48 flex flex-col`}>
+                  {index % 2 === 0 && (
+                    <div className="flex justify-end">
+                      <Collapsible className={`${day.color} text-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 w-80 flex flex-col`}>
                         <div className="flex justify-between items-center mb-3">
                           <h3 className="text-xl font-bold">Day {day.number}</h3>
-                          <div className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center">
-                            <span className="font-bold">{day.number}</span>
-                          </div>
                         </div>
                         <p className="text-white/90 font-medium mb-4">{day.title}</p>
                         
-                        <ul className="space-y-2 mt-auto">
-                          {day.content.map((item, i) => <li key={i} className="flex items-start text-sm">
+                        <ul className="space-y-2 mt-2">
+                          {day.content.map((item, i) => (
+                            <li key={i} className="flex items-start text-sm">
                               <div className="h-4 w-4 bg-white/30 rounded-full flex items-center justify-center mt-1 mr-2 flex-shrink-0">
                                 <svg className="h-2 w-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                                 </svg>
                               </div>
                               <span className="text-white/90">{item}</span>
-                            </li>)}
+                            </li>
+                          ))}
                         </ul>
-                      </div>
-                    </div>}
+                        
+                        <CollapsibleTrigger className="mt-4 w-full flex items-center justify-center text-white/80 hover:text-white transition-colors">
+                          <div className="flex items-center space-x-1">
+                            <span className="text-sm font-medium">Show details</span>
+                            <ChevronDown className="h-4 w-4" />
+                          </div>
+                        </CollapsibleTrigger>
+                        
+                        <CollapsibleContent className="mt-4 pt-3 border-t border-white/20">
+                          <div className="text-sm text-white/90">
+                            <p>Additional information about Day {day.number}</p>
+                            <ul className="mt-2 space-y-1 list-disc list-inside pl-2">
+                              <li>Begin with setup and preparation</li>
+                              <li>Focus on hands-on practice</li>
+                              <li>Complete daily challenges</li>
+                            </ul>
+                          </div>
+                        </CollapsibleContent>
+                      </Collapsible>
+                    </div>
+                  )}
                 </div>
                 
                 {/* Circle indicator */}
@@ -87,67 +112,105 @@ const DailyBreakdown = () => {
 
                 {/* Right side - visible on desktop */}
                 <div className="md:w-1/2 md:pl-12 hidden md:block">
-                  {index % 2 === 1 && <div className="flex justify-start">
-                      <div className={`${day.color} text-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 w-80 h-48 flex flex-col`}>
+                  {index % 2 === 1 && (
+                    <div className="flex justify-start">
+                      <Collapsible className={`${day.color} text-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 w-80 flex flex-col`}>
                         <div className="flex justify-between items-center mb-3">
                           <h3 className="text-xl font-bold">Day {day.number}</h3>
-                          <div className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center">
-                            <span className="font-bold">{day.number}</span>
-                          </div>
                         </div>
                         <p className="text-white/90 font-medium mb-4">{day.title}</p>
                         
-                        <ul className="space-y-2 mt-auto">
-                          {day.content.map((item, i) => <li key={i} className="flex items-start text-sm">
+                        <ul className="space-y-2 mt-2">
+                          {day.content.map((item, i) => (
+                            <li key={i} className="flex items-start text-sm">
                               <div className="h-4 w-4 bg-white/30 rounded-full flex items-center justify-center mt-1 mr-2 flex-shrink-0">
                                 <svg className="h-2 w-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                                 </svg>
                               </div>
                               <span className="text-white/90">{item}</span>
-                            </li>)}
+                            </li>
+                          ))}
                         </ul>
-                      </div>
-                    </div>}
+                        
+                        <CollapsibleTrigger className="mt-4 w-full flex items-center justify-center text-white/80 hover:text-white transition-colors">
+                          <div className="flex items-center space-x-1">
+                            <span className="text-sm font-medium">Show details</span>
+                            <ChevronDown className="h-4 w-4" />
+                          </div>
+                        </CollapsibleTrigger>
+                        
+                        <CollapsibleContent className="mt-4 pt-3 border-t border-white/20">
+                          <div className="text-sm text-white/90">
+                            <p>Additional information about Day {day.number}</p>
+                            <ul className="mt-2 space-y-1 list-disc list-inside pl-2">
+                              <li>Begin with setup and preparation</li>
+                              <li>Focus on hands-on practice</li>
+                              <li>Complete daily challenges</li>
+                            </ul>
+                          </div>
+                        </CollapsibleContent>
+                      </Collapsible>
+                    </div>
+                  )}
                 </div>
                 
                 {/* Mobile view */}
                 <div className="w-full md:hidden">
-                  <div className={`${day.color} text-white p-4 rounded-lg shadow-md flex items-center cursor-pointer`} onClick={() => toggleDay(index)}>
-                    <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center mr-4">
-                      <span className="font-bold">{day.number}</span>
+                  <Collapsible className={`${day.color} text-white p-4 rounded-lg shadow-md`}>
+                    <div className="flex items-center">
+                      <div className="mr-4">
+                        <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
+                          <span className="font-bold">{day.number}</span>
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-bold">{day.title}</h3>
+                        <ul className="space-y-2 mt-2">
+                          {day.content.map((item, i) => (
+                            <li key={i} className="flex items-start text-sm">
+                              <div className="h-4 w-4 bg-white/30 rounded-full flex items-center justify-center mt-1 mr-2 flex-shrink-0">
+                                <svg className="h-2 w-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                </svg>
+                              </div>
+                              <span className="text-white/90">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                    <h3 className="text-lg font-bold">{day.title}</h3>
-                    {openDay === index ? <ChevronUp className="h-5 w-5 text-white ml-auto" /> : <ChevronDown className="h-5 w-5 text-white ml-auto" />}
-                  </div>
+                    
+                    <CollapsibleTrigger className="mt-4 w-full flex items-center justify-center text-white/80 hover:text-white transition-colors">
+                      <div className="flex items-center space-x-1">
+                        <span className="text-sm font-medium">Show details</span>
+                        <ChevronDown className="h-4 w-4" />
+                      </div>
+                    </CollapsibleTrigger>
+                    
+                    <CollapsibleContent className="mt-4 pt-3 border-t border-white/20">
+                      <div className="text-sm text-white/90">
+                        <p>Additional information about Day {day.number}</p>
+                        <ul className="mt-2 space-y-1 list-disc list-inside pl-2">
+                          <li>Begin with setup and preparation</li>
+                          <li>Focus on hands-on practice</li>
+                          <li>Complete daily challenges</li>
+                        </ul>
+                      </div>
+                    </CollapsibleContent>
+                  </Collapsible>
                 </div>
               </div>
-              
-              {/* Content (shown when expanded) */}
-              {openDay === index && <div className="mt-4 bg-white rounded-lg border border-gray-100 shadow-sm p-6 mx-4 md:mx-auto md:w-2/3 transition-all duration-300 animate-fade-in">
-                  <h4 className="font-semibold text-lg text-gray-900 mb-3">Day {day.number} Activities:</h4>
-                  <ul className="space-y-3">
-                    {day.content.map((item, i) => <li key={i} className="flex items-start">
-                        <div className={`h-5 w-5 ${day.color} rounded-full flex items-center justify-center mt-1 mr-3`}>
-                          <svg className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                          </svg>
-                        </div>
-                        <span className="text-gray-700">{item}</span>
-                      </li>)}
-                  </ul>
-                </div>}
-              
-              {/* Desktop indicator to click for more details */}
-              
               
               {/* Separator for mobile */}
               <div className="md:hidden mt-6">
                 <Separator className="bg-gray-200" />
               </div>
-            </div>)}
+            </div>
+          ))}
         </div>
       </div>
     </section>;
 };
+
 export default DailyBreakdown;
