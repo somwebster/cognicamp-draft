@@ -1,7 +1,6 @@
 
-import { FormField, FormItem, FormControl, FormMessage } from "@/components/ui/form";
+import { FormField, FormItem, FormControl, FormMessage, FormLabel } from "@/components/ui/form";
 import { Checkbox } from "@/components/ui/checkbox";
-import { FormLabel } from "@/components/ui/label";
 import { Control } from "react-hook-form";
 import { RegistrationFormValues } from "@/schemas/registrationSchema";
 
