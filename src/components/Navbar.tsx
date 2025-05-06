@@ -20,7 +20,6 @@ const Navbar = () => {
             <a href="#what-you-build" className="text-gray-700 hover:text-primary px-2 py-1 rounded-md text-sm font-medium transition-colors">What You'll Build</a>
             <a href="#daily-breakdown" className="text-gray-700 hover:text-primary px-2 py-1 rounded-md text-sm font-medium transition-colors">Schedule</a>
             <a href="#faq" className="text-gray-700 hover:text-primary px-2 py-1 rounded-md text-sm font-medium transition-colors">FAQ</a>
-            <a href="#gallery" className="text-gray-700 hover:text-primary px-2 py-1 rounded-md text-sm font-medium transition-colors">Gallery</a>
             <a href="#register" className="bg-primary text-white hover:bg-blue-600 px-4 py-2 rounded-md text-sm font-medium transition-colors">Register Now</a>
           </div>
           
@@ -40,7 +39,6 @@ const Navbar = () => {
             <a href="#what-you-build" className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">What You'll Build</a>
             <a href="#daily-breakdown" className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Schedule</a>
             <a href="#faq" className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">FAQ</a>
-            <a href="#gallery" className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Gallery</a>
             <a href="#register" className="bg-primary text-white block px-3 py-2 rounded-md text-base font-medium mt-4">Register Now</a>
           </div>
         </div>

@@ -5,7 +5,6 @@ import WhatYoullBuild from "@/components/WhatYoullBuild";
 import DailyBreakdown from "@/components/DailyBreakdown";
 import Rewards from "@/components/Rewards";
 import FAQ from "@/components/FAQ";
-import Gallery from "@/components/Gallery";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 
@@ -19,7 +18,6 @@ const Index = () => {
         <DailyBreakdown />
         <Rewards />
         <FAQ />
-        <Gallery />
         <CallToAction />
       </div>
       <Footer />
