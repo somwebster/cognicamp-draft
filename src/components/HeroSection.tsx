@@ -46,25 +46,15 @@ const HeroSection = () => {
           
           <div className="order-1 md:order-2 flex justify-center items-center">
             <div className="relative w-full h-64 sm:h-80 md:h-96">
-              {/* Animated shape 1 */}
-              <div className="absolute left-0 top-0 w-40 h-40 md:w-48 md:h-48 animate-float" style={{
-              animation: 'float 7s ease-in-out infinite'
-            }}>
-                <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80&blend=4285F4&blend-alpha=10&blend-mode=normal&blend-saturation=100" alt="Tech background" className="w-full h-full object-contain rounded-lg" />
-              </div>
-              
-              {/* Animated shape 2 */}
-              <div className="absolute right-0 bottom-0 w-48 h-48 md:w-56 md:h-56 animate-float" style={{
-              animation: 'float 6s ease-in-out infinite 0.5s'
-            }}>
-                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80&blend=4285F4&blend-alpha=10&blend-mode=normal&blend-saturation=100" alt="Student coding" className="w-full h-full object-contain rounded-lg" />
-              </div>
-              
-              {/* Central animated image */}
-              <div className="absolute left-1/4 top-1/4 w-52 h-52 md:w-64 md:h-64 z-10 animate-float" style={{
-              animation: 'float 8s ease-in-out infinite 1s'
-            }}>
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80&blend=4285F4&blend-alpha=5&blend-mode=normal&blend-saturation=50" alt="AI learning" className="w-full h-full object-contain rounded-lg shadow-lg" />
+              {/* Main hero image */}
+              <div className="w-full h-full flex justify-center items-center animate-float" style={{
+                animation: 'float 8s ease-in-out infinite'
+              }}>
+                <img 
+                  src="/lovable-uploads/3273cf58-33f6-48cb-8b7e-5e0dd07c0cd2.png" 
+                  alt="AI learning illustration" 
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
           </div>
